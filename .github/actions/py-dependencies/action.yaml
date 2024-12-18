@@ -109,7 +109,7 @@ runs:
       run: |
         echo "::TEMP:: remove nose"
         ${VIRTUALENV_DIR}/bin/pip uninstall -y nose
-        ${VIRTUALENV_DIR}/bin/pip install pynose
+        ${VIRTUALENV_DIR}/bin/pip install --force-reinstall pynose
         echo "::TEMP:: END remove nose"
 
     - name: Install Runners

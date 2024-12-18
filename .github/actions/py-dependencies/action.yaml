@@ -108,7 +108,7 @@ runs:
       shell: bash
       run: |
         echo "::TEMP:: remove nose"
-        ${VIRTUALENV_DIR}/bin/pip uninstall nose
+        ${VIRTUALENV_DIR}/bin/pip uninstall -y nose
         ${VIRTUALENV_DIR}/bin/pip install pynose
         echo "::TEMP:: END remove nose"
 

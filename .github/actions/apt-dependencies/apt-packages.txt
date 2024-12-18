@@ -1,6 +1,6 @@
 # pre-installed on GHA
 #jq
-#gh # github cli
+gh
 #imagemagick
 
 # for st2 pip build

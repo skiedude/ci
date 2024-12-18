@@ -52,12 +52,12 @@ jobs:
           lint-configs-branch: ${{ inputs.lint-configs-branch }}
 
       - name: Install APT Dependencies
-        uses: StackStorm-Exchange/ci/.github/actions/apt-dependencies@master
+        uses: skiedude/ci/.github/actions/apt-dependencies@python
         with:
           cache-version: ${{ inputs.apt-cache-version }}
 
       - name: Install Python Dependencies
-        uses: StackStorm-Exchange/ci/.github/actions/py-dependencies@master
+        uses: skiedude/ci/.github/actions/py-dependencies@python
         with:
           cache-version: ${{ inputs.py-cache-version }}
           python-version: ${{ matrix.python-version }}

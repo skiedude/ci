@@ -104,6 +104,14 @@ runs:
         ${VIRTUALENV_DIR}/bin/pip install -r requirements.txt
         echo "::endgroup::"
 
+    - name: TEMP remove nose
+      shell: bash
+      run: |
+        echo "::TEMP:: remove nose"
+        ${VIRTUALENV_DIR}/bin/pip uninstall nose
+        ${VIRTUALENV_DIR}/bin/pip install pynose
+        echo "::TEMP:: END remove nose"
+
     - name: Install Runners
       if: inputs.mode == 'pack'
       shell: bash
